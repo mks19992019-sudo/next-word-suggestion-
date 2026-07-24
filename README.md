@@ -2,6 +2,12 @@
 
 A complete next-word prediction project with a trained TensorFlow/Keras LSTM model, a FastAPI inference backend, and a React UI that shows inline gray ghost-text suggestions while the user types.
 
+## Live Demo
+
+```text
+https://next-word-suggestion-1.onrender.com
+```
+
 ## How It Works
 
 1. The user types text in the React editor.
