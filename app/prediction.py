@@ -3,15 +3,9 @@ import pickle
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 
-
-
 model   = None
 tokenizer = None
 max_len = None
-
-
-
-
 
 
 # intialize the model and tokenizer if they are not already initialized

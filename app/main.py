@@ -9,6 +9,7 @@ async def lifespan(app:FastAPI):
     yield
     close()
 
+
 class state(BaseModel):
     text : str
     
