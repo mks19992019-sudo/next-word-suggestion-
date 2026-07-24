@@ -1,11 +1,13 @@
 from tensorflow.keras.models import load_model
 import pickle
+from pathlib import Path
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 
 model   = None
 tokenizer = None
 max_len = None
+MODEL_DIR = Path(__file__).resolve().parent / "model"
 
 
 # intialize the model and tokenizer if they are not already initialized
@@ -19,18 +21,18 @@ def initialize_variable():
 
 
 def model_initialize():
-    model = load_model("model/lstm_next_word.keras")
+    model = load_model(MODEL_DIR / "lstm_next_word.keras")
     return model
 
 
 def tokenizer_initialize():
-    with open("model/tokenizer.pkl", "rb") as f:
+    with open(MODEL_DIR / "tokenizer.pkl", "rb") as f:
         tokenizer = pickle.load(f)
     return tokenizer
 
 
 def max_sequence_length():
-    with open("model/max_len.pkl", "rb") as f:
+    with open(MODEL_DIR / "max_len.pkl", "rb") as f:
         max_len=pickle.load(f)
 
     return max_len

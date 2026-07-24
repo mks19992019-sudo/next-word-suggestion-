@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from prediction import initialize_variable , close , predict_next_word
+from app.prediction import initialize_variable , close , predict_next_word
 from contextlib import asynccontextmanager
 
 @asynccontextmanager
