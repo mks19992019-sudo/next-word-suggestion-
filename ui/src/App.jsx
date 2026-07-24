@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Header from './Component /header/header'
 
-const API_URL = 'http://127.0.0.1:8000/predict'
+const API_URL = 'https://next-word-suggestion.onrender.com/predict'
 const PREDICTION_DELAY = 350
 
 const App = () => {
@@ -57,7 +57,7 @@ const App = () => {
         if (requestId.current === currentRequest) {
           setSuggestion('')
           setStatus('Offline')
-          setError('Start the FastAPI server on port 8000 to see predictions.')
+          setError('wait backend server is starting ')
         }
       }
     }, PREDICTION_DELAY)

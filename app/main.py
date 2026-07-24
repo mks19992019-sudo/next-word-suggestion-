@@ -18,8 +18,9 @@ app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    # it allow all browser not only the local host if it true then it block 
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -34,7 +35,6 @@ def pred(text:state):
     text_for_pred = text.text
     result = predict_next_word(text_for_pred)
     return result
-
 
 
 
