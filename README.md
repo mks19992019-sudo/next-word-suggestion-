@@ -8,6 +8,16 @@ A complete next-word prediction project with a trained TensorFlow/Keras LSTM mod
 https://next-word-suggestion-1.onrender.com
 ```
 
+## Demo Video
+
+A demo video is included with the project/post to show the React UI, inline gray next-word suggestion, `Tab` accept flow, and `Esc` dismiss flow.
+
+Video path:
+
+```text
+demo_video/Lstm next word prediction.mov
+```
+
 ## How It Works
 
 1. The user types text in the React editor.
@@ -136,6 +146,8 @@ Next_wrod/
 │   ├── main.py
 │   ├── prediction.py
 │   └── Readme.md
+├── demo_video/
+│   └── Lstm next word prediction.mov
 ├── train/
 │   ├── 1661-0.txt
 │   ├── next-word.ipynb
