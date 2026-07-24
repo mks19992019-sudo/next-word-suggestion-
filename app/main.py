@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from starlette.concurrency import run_in_threadpool
 from app.prediction import initialize_variable , close , predict_next_word
 from contextlib import asynccontextmanager
 
@@ -26,15 +27,14 @@ app.add_middleware(
 )
 
 @app.get('/home')
-def check():
+async def check():
     return 'fast api is working'
 
 
 @app.post('/predict')
-def pred(text:state):
+async def pred(text:state):
     text_for_pred = text.text
-    result = predict_next_word(text_for_pred)
+    result = await run_in_threadpool(predict_next_word, text_for_pred)
     return result
-
 
 
