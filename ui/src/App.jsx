@@ -116,6 +116,10 @@ const App = () => {
             <span>{displaySuggestion ? 'Tab accepts · Esc dismisses' : 'Type to predict'}</span>
           </div>
 
+          <p className="server-note">
+            First prediction can take a little time because the Render backend wakes up and loads the model on a 500 MB RAM service.
+          </p>
+
           <label className="editor-label" htmlFor="next-word-input">
             Write a sentence
           </label>

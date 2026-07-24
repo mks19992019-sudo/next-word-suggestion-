@@ -56,6 +56,17 @@ textarea {
   font-weight: 700;
 }
 
+.server-note {
+  margin: -6px 0 22px;
+  border-left: 3px solid #2e7d6e;
+  padding: 10px 12px;
+  color: #52605f;
+  background: rgba(46, 125, 110, 0.08);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .ghost-editor {
   position: relative;
   min-height: 310px;
